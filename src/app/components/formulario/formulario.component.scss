@@ -1,0 +1,202 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* centraliza todo o conteúdo do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* diminui o tamanho dos retângulos e aumenta a fonte */
+.progresso {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between; /* Adiciona espaço entre os retângulos */
+  align-items: center; /* Centraliza verticalmente os retângulos */
+  margin-bottom: 30px; /* Adiciona margem na parte inferior */
+}
+
+/* Ajustes do retangulo*/
+
+.timeline-retangulo {
+  white-space: nowrap;
+  background-color: #858585;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 120px; /* Divide igualmente em 4 colunas, subtraindo o espaço entre elas */
+  text-align: center;
+  margin-right: 10px; /* Adiciona espaço entre os retângulos */
+}
+
+.timeline-retangulo:first-child{
+  background-color: #0081F8;
+}
+
+/* diminui o tamanho da linha e centraliza o conteúdo */
+.linha {
+  height: 1px;
+  width: 25%; /* Divide igualmente em 4 colunas */
+  background-color: #535353;
+  margin-right: 8px; /* Adiciona espaço entre as linhas */
+}
+
+/* diminui o tamanho dos inputs */
+.form-control {
+  font-size: 0.9rem;
+  height: 30px;
+  padding: 0.2rem;
+  display: block;
+  border: none;
+  border-bottom: 2px #00a6d0 solid;
+  background-color: #e7e7e7;
+}
+
+.formcontrol1{
+  min-width: 900px;
+}
+
+/* centraliza os botões */
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* estilo para o botão "Salvar Treinamento" */
+.infeite {
+  margin-top: 65px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0081F8;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/* estilo para o botão "Incluir novas mídias" */
+.input-file-label {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  margin-left: 1rem;
+}
+
+.input-file {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+/* alinha e centraliza o texto abaixo dos botões */
+.botao p {
+  white-space: nowrap;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 8px;
+}
+
+/* diminui o tamanho das imagens */
+.tumb img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-right: 1rem;
+}
+
+/* Estilo para a exibição das imagens selecionadas */
+.tumb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  }
+  
+  .tumb-item {
+  max-width: 150px;
+  max-height: 150px;
+  margin-right: 1rem;
+  
+  }
+
+/* alinha as duas colunas do formulário */
+section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  flex-direction: column;
+  min-width: 1200px;
+  gap: 20px;
+}
+
+/* estilo para o botão "Selecione uma imagem para a capa do treinamento" */
+section button {
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: #0081F8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+// input carga,tentativas e media
+.right-input {
+  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 55px;
+}
+
+// estilização do titulo para o treinamento
+
+.titulo {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 12px;
+  white-space: nowrap;
+  gap: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body{
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+// formlinha 1
+
+.formlinha1{
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.linhap{
+  display: block;
+}
+
+.descricao{
+  resize: vertical;
+  height: 200px;
+}

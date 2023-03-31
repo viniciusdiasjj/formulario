@@ -1,0 +1,33 @@
+.agradecimento-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+  }
+  
+  .agradecimento-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .agradecimento-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .agradecimento-container button {
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .agradecimento-container button:hover {
+    background-color: #0062cc;
+  }
+  

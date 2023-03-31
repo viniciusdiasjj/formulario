@@ -1,0 +1,82 @@
+<!-- Utilizei a diretiva "formGroup" para associar o formulário criado no "formulario.component.ts" ao template HTML.
+   E a diretiva "formControlName" para associar cada campo do formulário a uma propriedade definida no componente. -->
+  
+   <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+    <!-- Div para a timeline do formulário -->
+  <div class="progresso">
+    <div class="timeline-retangulo">Informações Gerais</div>
+    <div class="linha"></div>
+  
+    <div class="timeline-retangulo">Conteúdo</div>
+    <div class="linha"></div>
+  
+    <div class="timeline-retangulo">Avaliação</div>
+    <div class="linha"></div>
+  
+    <div class="timeline-retangulo">Participantes</div>
+  </div>
+  
+  <!-- Div para os botões salvar e incluir novas mídias -->
+  <div class="botoes-container">
+    <button class="infeite" (click)="salvarTreinamento()">Salvar Treinamento</button>
+    <label class="infeite input-file-label">
+      <input multiple type="file" class="input-file" (change)="selecionarArquivo($event)">
+        Incluir novas mídias*
+    </label>
+  </div>
+  
+    <!-- Parágrafo para a mensagem sobre o tamanho máximo das mídias -->
+  <p>*Tamanho máximo por mídia 500mb</p>
+  
+<!-- Div para a exibição das imagens selecionadas -->
+  <div class="tumb">
+    <div class="tumb-item" *ngFor="let i of imagens">
+      <img *ngIf='i.mimeType != "" ' [src]="'data:' + i.mimeType + ';base64,' + i.midia" alt="imagem" />
+    </div>
+  </div>
+
+
+    <!-- Seção com os campos do formulário -->
+  <section>
+    <div class="formlinha1">
+
+      <label class="linhap"  for="titulo">Título para o Treinamento
+        <input type="text" class="form-control formcontrol1" id="titulo" formControlName="titulo"> 
+      </label> 
+
+      <label class="linhap" for="carga-horaria">C.H
+        <input placeholder="Horas" type="text" class="form-control right-input" id="carga-horaria" formControlName="cargaHoraria">
+      </label>
+  
+      <label class="linhap" for="qtd-avaliacoes">Tentativas
+        <input placeholder="x" type="text" class="form-control right-input" id="qtd-avaliacoes" formControlName="qtdAvaliacoes">
+      </label>
+        
+      <label class="linhap" for="media-acerto">Média
+          <input placeholder="%" type="text" class="form-control right-input" id="media-acerto" formControlName="mediaAcerto">
+      </label>
+
+    </div>
+
+
+
+    <label class="body" for="responsavel">Responsável pelo treinamento
+      <input type="text" class="form-control" id="responsavel" formControlName="responsavel">
+    </label>
+    
+    <label class="body" for="cargo">Cargo/Setor/Empresa Responsável Pelo Treinamento
+      <input type="text" class="form-control" id="cargo" formControlName="cargo">
+    </label>
+    
+    <label class="body" for="descricao">Descrição/Objetivo do Treinamento
+      <textarea type="text" class="form-control descricao" id="descricao" formControlName="descricao"></textarea>
+    </label> 
+    
+
+    <div>
+
+      <button>Selecione uma imagem para a capa do treinamento</button>
+
+    </div>
+  </section>
+</form>
